@@ -3,12 +3,12 @@
 return array (
   'db' => 
   array (
-    'server' => '127.0.0.1',
+    'server' => '10.1.2.159',
     'username' => 'root',
-    'password' => 'password',
+    'password' => '',
     'name' => 'ppma',
-    'port' => 3306,
+    'port' => '3306',
   ),
-  'isInstalled' => false,
+  'isInstalled' => true,
   'version' => '0.6.0',
 );

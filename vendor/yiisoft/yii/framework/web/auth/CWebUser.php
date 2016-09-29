@@ -305,6 +305,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 		$this->setState('__id',$value);
 	}
 
+	
 	/**
 	 * Returns the unique identifier for the user (e.g. username).
 	 * This is the unique identifier that is mainly used for display purpose.

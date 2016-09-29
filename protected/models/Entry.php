@@ -249,7 +249,10 @@ class Entry extends CActiveRecord
                 $criteria->mergeWith($c);
             }
         }
-
+        
+        $userId=$_SESSION['uid'];
+        $criteria->addCondition("t.userId =$userId");
+        
         /* @var Setting $pageSize */
         $pageSize = Setting::model()->name(Setting::PAGINATION_PAGE_SIZE_ENTRIES)->find();
 

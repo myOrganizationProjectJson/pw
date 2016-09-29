@@ -15,7 +15,8 @@ class RecentEntriesWidget extends CWidget
         $c->order = 't.id DESC';
         /** @noinspection PhpUndefinedMethodInspection */
         $c->limit = Setting::model()->name(Setting::RECENT_ENTRIES_WIDGET_COUNT)->find()->value;
-
+         $userId=$_SESSION['uid'];
+        $c->addCondition("t.userId =$userId");
         // get entries
         $models = Entry::model()->findAll($c);
 

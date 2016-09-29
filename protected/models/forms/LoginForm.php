@@ -61,6 +61,7 @@ class LoginForm extends CFormModel
         switch($identity->errorCode)
         {
             case UserIdentity::ERROR_NONE:
+                $_SESSION['uid']=$identity->getId();
                 if ($this->rememberMe) {
                     $webUser->login($identity, 3600*24*7);
                 } else {

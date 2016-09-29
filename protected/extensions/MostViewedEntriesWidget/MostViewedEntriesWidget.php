@@ -15,7 +15,8 @@ class MostViewedEntriesWidget extends CWidget
         $c->order = 't.viewCount DESC';
         /** @noinspection PhpUndefinedMethodInspection */
         $c->limit = Setting::model()->name(Setting::MOST_VIEWED_ENTRIES_WIDGET_COUNT)->find()->value;
-
+        $userId=$_SESSION['uid'];
+        $c->addCondition("t.userId =$userId");
         // get entries
         $models = Entry::model()->findAll($c);
 
