@@ -5,13 +5,13 @@
 
     <nav class="top-bar">
         <ul>
-            <li class="name">
-	            <h1>
-	            <a href="<?php echo CHtml::normalizeUrl(array('/')) ?>"><?php echo CHtml::encode(Yii::app()->name); ?>
-	            </a>
-	            <?php echo CHtml::link('Create NEW PW', array('entry/create')) ?>
-	            </h1>
-            </li>
+            <li class="name"><h1>
+            <!--
+            <a href="<?php echo CHtml::normalizeUrl(array('/')) ?>"><?php echo CHtml::encode(Yii::app()->name); ?>
+            </a>
+            -->
+            <?php echo CHtml::link('Create NEW PW', array('entry/create')) ?>
+            </h1></li>
         </ul>
         <section>
             <ul class="left">
